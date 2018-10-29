@@ -1,7 +1,7 @@
-import React from "react";
+import React, { PureComponent, Component } from 'react'
 import * as BooksAPI from "../Servicos/BooksAPI";
 
-class Book extends React.Component {
+class Book extends PureComponent {
 
     constructor(props) {
         super(props);

@@ -25,11 +25,11 @@ class BooksApp extends React.Component {
     ]
   };
 
-  componentDidMount() {
-    BooksAPI.getAll().then(shelvedBooks => {
-      this.setState({ shelvedBooks });
-    });
+  async componentDidMount() {
+    const shelvedBooks = await BooksAPI.getAll()
+    this.setState({ shelvedBooks })
   }
+
 
   changeShelf = (bookToAdd, shelf) => {
     this.setState(state => {

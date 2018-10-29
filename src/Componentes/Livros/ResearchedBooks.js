@@ -43,7 +43,7 @@ class ResearchedBooks extends React.Component {
                 <Book
                   book={book}
                   key={book.id}
-                  changeTrigger={this.props.changeTrigger}
+                  changeShelf={this.props.changeShelf}
                   shelvedBooks={shelvedBooks}
                 />
               ))}
