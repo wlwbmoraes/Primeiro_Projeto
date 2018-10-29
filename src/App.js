@@ -9,7 +9,7 @@ import ResearchedBooks from './Componentes/Livros/ResearchedBooks';
 class BooksApp extends React.Component {
   state = {
     shelvedBooks: [],
-    shelves: [
+     shelves: [
       {
         id: "currentlyReading",
         name: "Lendo Atualmente"

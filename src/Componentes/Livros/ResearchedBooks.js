@@ -12,7 +12,7 @@ class ResearchedBooks extends React.Component {
   handleSearch(e) {
     if (e.target.value !== "") {
       this.setState({ query: e.target.value });
-      BooksAPI.search(this.state.query).then(findBooks => {
+      BooksAPI.search(e.target.value).then(findBooks => {
         this.setState({ findBooks: !findBooks || findBooks.error ? [] : findBooks });
       });
     } else {
@@ -43,7 +43,7 @@ class ResearchedBooks extends React.Component {
                 <Book
                   book={book}
                   key={book.id}
-                  changeShelf={this.props.changeShelf}
+                  changeTrigger={this.props.changeTrigger}
                   shelvedBooks={shelvedBooks}
                 />
               ))}
